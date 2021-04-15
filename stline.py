@@ -2,7 +2,6 @@ import os
 filename = ""
 line = ""
 filebuffer = []
-filesize = os.path.getsize(openedfile.name)
 try:
 	while filename == "":
 		filename = input("What file name? > ")
@@ -12,6 +11,7 @@ except KeyboardInterrupt:
 if os.path.exists(filename):
     print("Warning - this file already exists.")
 openedfile = open(filename, "a");
+filesize = os.path.getsize(openedfile.name)
 print("File '" + filename + "' opened for writing.")
 print("Start typing. Changes will be saved in buffer.")
 try:
