@@ -29,6 +29,10 @@ try:
 				print("To be saved:")
 				for x in range(len(filebuffer)):
 					print(filebuffer[x])
+		if line == "#help":
+			print("#save - Save the file.")
+			print("#exit - Stop editing. This will not save your changes - use #save, then #exit.")
+			print("#show - Show the file contents, and what will be saved when the program quits.")
 		if not "#" in line:
 			filebuffer.append(line)
 except KeyboardInterrupt:
