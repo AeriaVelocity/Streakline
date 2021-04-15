@@ -1,5 +1,4 @@
-# ed.py
-Okay, so it's not a rewrite of the original `ed`. It's just in the spirit of it.
+### A WYGIWYG line mode text editor, inspired by the standard text editor, [ed](https://www.gnu.org/fun/jokes/ed-msg.html)!
 
 To use it, run the Python file (Python 3 required), name a file, then start typing.
 
