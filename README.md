@@ -24,7 +24,4 @@ To be saved:
 meow :3
 ed > #save
 File 'youar.e' - 18 bytes saved.
-Type #exit to stop editing.
-ed > #exit
-File 'youar.e' closed.
 ```
