@@ -10,6 +10,7 @@ Commands:
 
 Example:
 ```
+~$ python ed.py
 What file name? > youar.e
 Warning - this file already exists.
 File 'youar.e' opened for writing.
@@ -24,4 +25,5 @@ To be saved:
 meow :3
 ed > #save
 File 'youar.e' - 18 bytes saved.
+~$
 ```
