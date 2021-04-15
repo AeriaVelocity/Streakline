@@ -11,7 +11,6 @@ except KeyboardInterrupt:
 if os.path.exists(filename):
     print("Warning - this file already exists.")
 openedfile = open(filename, "a");
-filesize = os.path.getsize(filename)
 print("File '" + filename + "' opened for writing.")
 print("Start typing. Changes will be saved in buffer.")
 try:
@@ -49,7 +48,9 @@ try:
 			filebuffer.append(line)
 except KeyboardInterrupt:
 	print()
-openedfile.close()
+openedfile.flush()
+os.fsync(openedfile.fileno())
+filesize = os.path.getsize(openedfile.name)
 if line == "~save":
 	print("File '" + filename + "' - " + str(filesize) + " bytes saved.")
 elif line == "~exit":
@@ -60,3 +61,4 @@ else:
 	print("File '" + filename + "' - closed without saving.")
 	if filesize < 1:
 		os.remove(filename)
+openedfile.close()
