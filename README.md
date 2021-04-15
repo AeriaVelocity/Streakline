@@ -1,14 +1,20 @@
 ### A WYGIWYG line mode text editor, inspired by the standard text editor, [ed](https://www.gnu.org/fun/jokes/ed-msg.html)!
 
-To use it, run the Python file (Python 3 required), name a file, then start typing.
+To use the batch/shell script files, you need to be able to run the following from the command line:
 
-Commands:
+**For Windows:** `python.exe` <br>
+**For macOS or GNU/Linux:** `python` or `python3`
+
+If this is possible, simply type `./stline` (or just `stline` for Windows) when inside the same directory as the script files and hit Enter.
+If not, either add `python` to your PATH, or type `python stline.py`.
+
+#### Commands
 - `~save` - Save the file and exit.
 - `~exit` - Exit without saving.
 - `~show` - Show the contents of the file and buffer.
 - `~del` - Remove the last line from the file buffer.
 
-Example:
+#### Example
 ```
 ~$ python ./stline.py
 What file name? > youar.e
