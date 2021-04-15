@@ -2,6 +2,7 @@ import os
 filename = ""
 line = ""
 filebuffer = []
+filesize = os.path.getsize(openedfile.name)
 try:
 	while filename == "":
 		filename = input("What file name? > ")
