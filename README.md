@@ -6,7 +6,8 @@ To use it, run the Python file (Python 3 required), name a file, then start typi
 Commands:
 - `~save` - Save the file and exit.
 - `~exit` - Exit without saving.
-- `~show` - Show the file contents, and what will be saved when the program quits.
+- `~show` - Show the contents of the file and buffer.
+- `~del` - Remove the last line from the file buffer.
 
 Example:
 ```
