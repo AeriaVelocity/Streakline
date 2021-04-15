@@ -10,20 +10,20 @@ Commands:
 
 Example:
 ```
-~$ python ./ed.py
+~$ python ./stline.py
 What file name? > youar.e
 Warning - this file already exists.
 File 'youar.e' opened for writing.
 Start typing. Changes will be saved in buffer.
-ed > meow :3
-ed > #show
+youar.e > meow :3
+youar.e > #show
 Previously stored:
 egg
 brain
 fish
 To be saved:
 meow :3
-ed > #save
+youar.e > #save
 File 'youar.e' - 18 bytes saved.
 ~$
 ```
