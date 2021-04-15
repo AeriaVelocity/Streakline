@@ -15,7 +15,7 @@ print("File '" + filename + "' opened for writing.")
 print("Start typing. Changes will be saved in buffer.")
 try:
 	while line != "~exit" and line != "~save":
-		line = input("ed > ")
+		line = input(filename + " > ")
 		if line == "~save":
 			for x in range(len(filebuffer)):
 				openedfile.write(filebuffer[x] + "\n")
