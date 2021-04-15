@@ -16,14 +16,14 @@ Warning - this file already exists.
 File 'youar.e' opened for writing.
 Start typing. Changes will be saved in buffer.
 youar.e > meow :3
-youar.e > #show
+youar.e > ~show
 Previously stored:
 egg
 brain
 fish
 To be saved:
 meow :3
-youar.e > #save
+youar.e > ~save
 File 'youar.e' - 18 bytes saved.
 ~$
 ```
