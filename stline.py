@@ -1,16 +1,25 @@
 #!/usr/bin/env python
-import os
+import os, platform
 filename = ""
 line = ""
 filebuffer = []
 try:
 	while filename == "":
 		filename = input("What file name? > ")
+		if "/" in filename:
+			if platform.system() != "Windows":
+				print("\033[31mAvoid using pathnames.\033[0m")
+			else:
+				print("Avoid using pathnames.")
+			filename = ""
 except KeyboardInterrupt:
 	print("\nQuitting.")
 	exit(0)
 if os.path.exists(filename):
-    print("Warning - this file already exists.")
+	if platform.system() != "Windows":
+		print("\033[1;33mThis file already exists.\033[0m")
+	else:
+		print("This file already exists.")
 openedfile = open(filename, "a");
 filesize = os.path.getsize(openedfile.name)
 print("File '" + filename + "' opened for writing.")
@@ -22,15 +31,18 @@ try:
 			for x in range(len(filebuffer)):
 				openedfile.write(filebuffer[x] + "\n")
 		elif line == "~show":
-			filer = open(filename, 'r')
-			if filesize > 0:
-				print("Previously stored:")
-				print(filer.read(), end='')
-			filer.close()
-			if len(filebuffer):
-				print("To be saved:")
-				for x in range(len(filebuffer)):
-					print(filebuffer[x])
+			try:
+				filer = open(filename, 'r')
+				if filesize > 0:
+					print("Previously stored:")
+					print(filer.read(), end='')
+					filer.close()
+					if len(filebuffer):
+						print("To be saved:")
+						for x in range(len(filebuffer)):
+							print(filebuffer[x])
+			except UnicodeDecodeError:
+				print("This doesn't appear to be a text file.")
 		elif line == "~help":
 			print("~save - Save the file and exit.")
 			print("~exit - Exit without saving.")
