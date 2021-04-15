@@ -10,7 +10,7 @@ Commands:
 
 Example:
 ```
-~$ python ed.py
+~$ python ./ed.py
 What file name? > youar.e
 Warning - this file already exists.
 File 'youar.e' opened for writing.
