@@ -13,16 +13,21 @@ If you want to install it (because of course you do) then run the following comm
 cp ./stline.py /usr/local/bin/stline
 
 ```
+If you don't have root access:
+``` sh
+cp ./stline.py /your/preferred/path/to/stline
+export PATH=$PATH:/path/to/stline
+```
 
 `/usr/local/bin/` will already be in your PATH, so no further setup is required. Just type `stline` into your terminal to start using it. Have fun!
 
 #### Windows instructions
-To use the batch script file, you need to be able to run `python.exe` from the command line:
+> It is recommended to use [Cygwin](https://www.cygwin.com/) or [Git Bash](https://gitforwindows.org/) and follow the above instructions -- standard Windows CMD usage is finicky.
 
-If this is possible, simply type  `stline`  when inside the same directory as the script files and hit Enter.
-If not, either add `python` to your PATH, or type `python stline.py`.
+You need to be able to run `python.exe` from the command line.
+If this is possible, simply type `python stline.py`.
 
-To run Streakline anywhere, the folder with both `stline.bat` and `stline.py` should be added to PATH.
+To run Streakline anywhere, `stline.py` should be added to PATH.
 
 #### Commands
 - `~save` - Save the file and exit.
@@ -31,7 +36,7 @@ To run Streakline anywhere, the folder with both `stline.bat` and `stline.py` sh
 - `~del` - Remove the last line from the file buffer.
 
 #### Example
-```
+``` 
 ~$ python ./stline.py
 What file name? > youar.e
 Warning - this file already exists.
