@@ -1,3 +1,7 @@
+### :warning: **Streakline is deprecated.** Go and use [sued](https://github.com/That1M8Head/sued), it's a rewrite and continuation of Streakline in Rust which is actually just much better than this crap that I wrote when I was an idiot 18-year-old.
+
+---
+
 ### A WYGIWYG line mode text editor, inspired by the standard text editor, [ed](https://www.gnu.org/fun/jokes/ed-msg.html)!
 
 #### GNU/Linux instructions
